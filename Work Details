@@ -1,0 +1,21 @@
+Hello Tien! 
+Please download the the files that are in your repository. Import them into Eclipse. You will notice we have an interface called SensorInterface. 
+This interface MUST be implemented on the sensor classes that you will write. I also have an example coded in the form of temperature. Far from done, 
+but it is a good example of what I'm looking for. Your data must be provided to the getData() method that you implement from the interface.
+Our main program will use this method to get a new value every few seconds later. 
+
+==Your task involves coding 1 new sensor and changing the TemperatureSensor Class. For the new sensor, you can look up anything in the Vantage Pro
+2 that you want to include in our program, and simply create a sensor for it. It does not matter what algorithm you use to create data;
+whether it is total random or follows some pattern. All that I do want is that you implement the SensorInterface, and the getData() method
+which is part of the interface. If you are confused, check the example class I have coded for temperatureSensor to get an idea. Again,
+you can create a sensor for anything(eg. Barometer, Air Pressure), and use any algorithm to create data(random or intentional values), as long 
+as you implement the interface and the method of that interface. 
+==Secondly, I know you wanted to code the temperature class to follow a specific pattern depending on the time of the day. Therefore, I'm 
+giving you an optional work to rewrite the TemperatureSensor class according to how you see it fit. The only requirement I have, is the same. 
+It must have the getData method and the interface implemented. I hope this gives you the creative freedom to express your unique ways
+of deriving data, and you enjoy coding in this project. If you think it is fine, just leave it as it is.
+
+When you're done, please upload your two(or one) classes in your branch. Don't upload to master class. Simply upload to your own branch.
+
+Best and Good Luck, 
+Ali Iftakhar.
