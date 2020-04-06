@@ -8,7 +8,7 @@ Our main program will use this method to get a new value every few seconds later
 at the Vantage Pro 2 and determine which 2 things you want to create a sensor of. You may create a pattern to how the data is derived or make
 it totally random, but the one condition is that your classes MUST implement the interface mentioned, and the getData() method must be
 implemented in that class. (See the temperature class if you're unsure about something). You can create any 2 sensors, and you can 
-create any algorithm for the data retrieval, these things are fully up to your creative decisions.
+create any algorithm for the data creation, these things are fully up to your creative decisions.
 
 When you're done, please upload your two classes in your branch. Don't upload to master class. Simply upload to your own branch.
 
