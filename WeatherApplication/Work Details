@@ -1,0 +1,29 @@
+Hello Phong! 
+Hope you're doing great. As of now, we've distributed the sensor work to 2 students, and I'm giving you the responsibility of creating the main 
+class where the thread will be running and collecting data from the sensors every few seconds later. I leave it up to you to decide
+how many seconds will be there between each data collection. It seems only us two are decently acquainted with threads, therefore I trust
+this task onto you. On a side note, during Monday's class Mr. Dincer mentioned that we do not need to worry about displaying data that we
+create. This means that we will not be creating a GUI application for this project, since that comes under Project 2. I know I mentioned GUI 
+during Sunday's meeting, but instead I want you to do 2 different insteads instead now.
+
+Instead of creating a GUI, I want you to use a Data Structure to store every value that our sensor has provided so far. Although, displaying 
+is not part of this assignment, saving all the data our sensors giving after every few seconds will prepare us to easily have everything
+available to be displayed when Project 2 comes around. You can use an ArrayList or any other data structure to store these values. 
+
+Also for help, I have a starter code uploaded where I coded a basic example of what you may expect from the sensor classes. The sensor classes
+will all implement the SensorInterface they will have a getData() method which will provide a new data every time you call it. These
+sensors DO NOT give data every few seconds, but rather your written class, using threads, will call the getData() method of these classes
+and they'll give you a new value everytime. Please refer to the TemperatureSensor class which is just an example coded to illustrate this.
+If your program works with TemperatureSensor Class, it'll work with all the other classes written by your fellow members.
+
+As a small note to get started, you may have to do something like TemperatureSensor tempSensor = new TemperatureSensor() and call this object's 
+getData() method.
+
+Optionally, if you want I know we don't have to display the data, but if you are curious about doing so you may create a GUI or a console based program
+that displays everything we have, or perform some operation on the Data Structures that have saved the sensor information and display that also.
+Again, this is NOT required for this assignment, but I know you expressed interest in this, therefore if you are still interested you may 
+go ahead and do this also. I leave the implementation detail of this upto you to decide.
+
+I hope you have fun doing this. 
+Best and Good Luck!!
+Ali Iftakhar.
