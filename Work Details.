@@ -1,0 +1,29 @@
+Hello Phong! 
+Hope you're doing great. As of now, we've distributed the sensor work to 2 students, and I'm giving you the responsibility of creating the main 
+class where the thread will be running and collecting data from the sensors every few seconds later. I leave it up to you to decide
+how many seconds will be there between each data collection. It seems only us two are decently acquainted with threads, therefore I trust
+this task onto you. On a side note, during Monday's class Mr. Dincer mentioned that we do not need to worry about displaying data that we
+create. This means that we will not be creating a GUI application for this project, since that comes under Project 2. I know I mentioned GUI 
+during Sunday's meeting, but instead I want you to do 2 different insteads instead now.
+
+I have changed our sensor classes. Our sensor classes now store the values as you call them every time. Therefore, an ArrayList storing the values
+and keeping them in sorted order are already in the sensors. The method name for these differ, therefore check the sensor classes to see what
+they are called. Humidity has 2 ArrayLists to store data, inner humidity and outer humidity, but rain has only one i.e. rainfall. 
+However, you do NOT have to worry about saving the data every time you call getData() method of each sensor. It's already being
+stored internally by the sensor itself. I have updated your branch with the latest classes and up to date information so please download it and
+check and see how the classes have been written. In general, each sensor uses the SensorInterface and uses getData(). That method is what
+you should be concerned with in your ISS. Also, if you want to find average values then you can do so using the getter method of this 
+data. Additionally, you can find the minimum and maximum value also. Since they're in sorted form, the last index will be max and first index
+will be minimum.
+
+As a small note to get started, you may have to do something like TemperatureSensor tempSensor = new TemperatureSensor() and call this object's 
+getData() method.
+
+Optionally, if you want I know we don't have to display the data, but if you are curious about doing so you may create a GUI or a console based program
+that displays everything we have, or perform some operation on the Data Structures that have saved the sensor information and display that also.
+Again, this is NOT required for this assignment, but I know you expressed interest in this, therefore if you are still interested you may 
+go ahead and do this also. I leave the implementation detail of this upto you to decide.
+
+I hope you have fun doing this. 
+Best and Good Luck!!
+Ali Iftakhar.
