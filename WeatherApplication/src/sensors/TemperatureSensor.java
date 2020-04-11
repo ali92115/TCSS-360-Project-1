@@ -41,9 +41,9 @@ public class TemperatureSensor implements SensorInterface {
     /**
      * The format of the temperature values. This in accordance with the 
      * given limits for the inner and outer temperatures as well as the 
-     * listed "resolution" of the data, which is 0.1째F. 
+     * listed "resolution" of the data, which is 0.1캟. 
      */
-    private static final DecimalFormat TEMP_FORMAT = new DecimalFormat("###.#째F");
+    private static final DecimalFormat TEMP_FORMAT = new DecimalFormat("###.#캟");
     
 	/**
 	 * The temperature inside the house (in degrees Fahrenheit)
@@ -57,8 +57,8 @@ public class TemperatureSensor implements SensorInterface {
 	
 	/**
 	 * The default constructor. The sensor starts with an inside 
-	 * temperature of 75째F and an outside temperature of 
-	 * 42째F. 
+	 * temperature of 75캟 and an outside temperature of 
+	 * 42캟. 
 	 */
 	
 	/**
@@ -80,13 +80,13 @@ public class TemperatureSensor implements SensorInterface {
 	
 	/**
 	 * The primary constructor. It allows the sensor to be set to 
-	 * some initial temperatures (in 째F).
+	 * some initial temperatures (in 캟).
 	 * 
 	 * An IllegalArgument Exception will be thrown under the following
 	 * conditions:
 	 * <ul>
-	 *     <li>tIn is less than 32째F or greater than 140째F</li>
-	 *     <li>tOut is less than -40째F or greater than 150째F</li>
+	 *     <li>tIn is less than 32캟 or greater than 140캟</li>
+	 *     <li>tOut is less than -40캟 or greater than 150캟</li>
 	 * </ul>
 	 * 
 	 * @param tIn - The initial inner temperature

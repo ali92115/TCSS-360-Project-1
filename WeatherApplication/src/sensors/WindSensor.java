@@ -20,7 +20,7 @@ public class WindSensor implements SensorInterface {
     /**
      * The format of the wind direction
      */
-    private static final DecimalFormat WIND_DIR_FORMAT = new DecimalFormat("###Â°");
+    private static final DecimalFormat WIND_DIR_FORMAT = new DecimalFormat("###°");
     
     /**
      * The format of the wind speed
@@ -28,7 +28,7 @@ public class WindSensor implements SensorInterface {
     private static final DecimalFormat WIND_SPEED_FORMAT = new DecimalFormat("###mph");
     
     /**
-     * The wind direction Â°, measured clockwise from the North direction
+     * The wind direction °, measured clockwise from the North direction
      */
     private double windDirection;
     
@@ -48,7 +48,7 @@ public class WindSensor implements SensorInterface {
     private ArrayList<Double> windSpeedArchieve;
     /**
      * The default constructor. It sets
-     * the wind speed and wind direction to 10mph and 0Â°, 
+     * the wind speed and wind direction to 10mph and 0°, 
      * respectively.
      */
     public WindSensor() {

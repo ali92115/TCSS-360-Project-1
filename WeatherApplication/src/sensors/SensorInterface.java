@@ -2,6 +2,10 @@ package sensors;
 
 public interface SensorInterface {
 	
-	String getData();
+	/**
+	 * This field gives our data a representative shape.
+	 * @return
+	 */
+	String getData();	
 	
 }
