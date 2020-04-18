@@ -1,6 +1,17 @@
 package sensors;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+/**
+ * This class simulates a rain sensor.
+ * 
+ * @author Benjamin Munoz
+ * @author Ali Iftakhar
+ * @version 4/5/2020
+ */
 
 public class RainSensor implements SensorInterface {
     /**
@@ -14,10 +25,17 @@ public class RainSensor implements SensorInterface {
     private double currentRainfall;
     
     /**
+     * Keeps track of all the values of rainfall.
+     */
+    
+    private ArrayList<Double> currentRainfallArchieve;
+    
+    /**
      * The default constructor
      */
     public RainSensor() {
         currentRainfall = 0;
+        currentRainfallArchieve = new ArrayList<>(); 
     }
     
     /**
@@ -33,6 +51,7 @@ public class RainSensor implements SensorInterface {
         }
         
         currentRainfall = curr;
+        currentRainfallArchieve = new ArrayList<>();
     }
     
     /**
@@ -44,7 +63,16 @@ public class RainSensor implements SensorInterface {
         } else {
             currentRainfall = 0;
         }
+        currentRainfallArchieve.add(currentRainfall);
         return "{rainfall: " + RAINFALL_FORMAT.format(currentRainfall) + "}";
     }
-
+    
+    /**
+     * This returns all the rainfall values stored as an a sorted ArrayList.
+     * @return ArrayList<> values of rainfall in sorted form.
+     */
+    public ArrayList<Double> allCurrentRainfall() {
+        Collections.sort(currentRainfallArchieve);
+        return currentRainfallArchieve;
+    }
 }

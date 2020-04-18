@@ -1,12 +1,14 @@
 package sensors;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * This class simulates a wind sensor.
  * 
  * @author Benjamin Munoz
- *
+ * @author Ali Iftakhar
  */
 public class WindSensor implements SensorInterface {
 
@@ -36,12 +38,23 @@ public class WindSensor implements SensorInterface {
     private double windSpeed;
     
     /**
+     * This field will keep track of all windDirections so far.
+     */
+    private ArrayList<Double> windDirectionArchieve;
+    
+    /**
+     * This field will keep track of all windSpeeds so far.
+     */
+    private ArrayList<Double> windSpeedArchieve;
+    /**
      * The default constructor. It sets
      * the wind speed and wind direction to 10mph and 0°, 
      * respectively.
      */
     public WindSensor() {
         this(0, 10);
+        windDirectionArchieve = new ArrayList<>();
+        windSpeedArchieve = new ArrayList<>();
     }
     
     /**
@@ -64,6 +77,9 @@ public class WindSensor implements SensorInterface {
            windDirection += 360;
        }
        windSpeed = speed;
+       
+       windDirectionArchieve = new ArrayList<>();
+       windSpeedArchieve = new ArrayList<>();
     }
     
     /**
@@ -76,6 +92,8 @@ public class WindSensor implements SensorInterface {
             windDirection += 360;
         }
         
+        windDirectionArchieve.add(windDirection);
+        
         windSpeed += (Math.random() * 2) - 1;
         if (windSpeed < 0) {
             windSpeed = 0;
@@ -83,10 +101,29 @@ public class WindSensor implements SensorInterface {
             windSpeed = MAX_WIND_SPEED;
         }
         
+        windSpeedArchieve.add(windSpeed);
+        
         String dirString = WIND_DIR_FORMAT.format(windDirection);
         String speedString = WIND_SPEED_FORMAT.format(windSpeed);
         
         return "{windSpeed: " + speedString + ", windDirection: " + dirString + "}";
     }
-
+    
+    /**
+     * This returns all the windDirection values stored as an a sorted ArrayList.
+     * @return ArrayList<> values of windDirection in sorted form.
+     */
+    public ArrayList<Double> allWindDirection() {
+        Collections.sort(windDirectionArchieve);
+        return windDirectionArchieve;
+    }
+    
+    /**
+     * This returns all the WindSpeed values stored as an a sorted ArrayList.
+     * @return ArrayList<> values of windSpeed in sorted form.
+     */
+    public ArrayList<Double> allWindSpeed() {
+        Collections.sort(windSpeedArchieve);
+        return windSpeedArchieve;
+    }
 }
