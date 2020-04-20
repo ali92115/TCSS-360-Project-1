@@ -75,5 +75,13 @@ public class RainSensor implements SensorInterface {
     	Collections.sort(currentRainfallArchieve);
     	return currentRainfallArchieve;
     }
+    
+    /**
+     * Getter method for testing to get size of currentRainfallArchieve.
+     * @return size of currentRainfallArchieve.
+     */
+    public int getCRASize() {
+    	return currentRainfallArchieve.size();
+    }
 
 }

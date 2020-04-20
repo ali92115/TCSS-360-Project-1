@@ -62,7 +62,7 @@ public class ISS {
 		
 		myTimer = new Timer();
 		
-		myTimer.schedule(task, 0, 3000);
+		myTimer.schedule(task, 0, 10000);
 	}
 	
 }
