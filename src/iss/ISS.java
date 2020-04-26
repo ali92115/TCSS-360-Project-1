@@ -1,5 +1,6 @@
 package iss;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -14,28 +15,29 @@ import iss.sensors.*;
  * @version 1.0
  */
 public class ISS {
-	private List<ISensor<object>> sensors;
+	private final ArrayList<ISensor<?>> sensors;
 
 	public ISS() {
-		sensors = new List<ISensor<object>>();
-		sensors.Add(new RainSensor());
-		sensors.Add(new TemperatureSensor());
-		sensors.Add(new WindSensor());
-		sensors.Add(new HumiditySensor());
+		sensors = new ArrayList<>();
+		sensors.add(new RainSensor());
+		sensors.add(new TemperatureSensor());
+		sensors.add(new WindSensor());
+		sensors.add(new HumiditySensor());
 	}
 
 	public void run() {
-		var task = new TimerTask()
-		{
-			String output;
-
-			for(ISensor<object> sensor: sensors)
-			{
-				output+= sensor.getData().toString();
-				output+="\n";
+		var task = new TimerTask() {
+			@Override
+			public void run() {
+				StringBuilder output = new StringBuilder();
+				for(ISensor<?> sensor: sensors)
+				{
+					output.append(sensor.getData().toString());
+					output.append("\n");
+				}
+				System.out.println(output);
+				System.out.println();
 			}
-			System.out.println(output);
-			System.out.println();
 		};
 		var myTimer = new Timer();
 		myTimer.schedule(task, 0, 10000);

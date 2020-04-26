@@ -1,5 +1,4 @@
-
-package iss;
+import iss.ISS;
 
 public class mainProgram {
 		

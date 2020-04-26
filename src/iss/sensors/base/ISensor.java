@@ -1,5 +1,6 @@
 package iss.sensors.base;
 
 public interface ISensor<TData> {
-    public TData getData();
+    ISensor<TData> Start();
+    TData getData();
 }
