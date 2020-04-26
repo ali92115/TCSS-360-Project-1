@@ -18,51 +18,10 @@ import sensors.WindSensor;
  */
 public class ISS {
 
-	/** Timer for all sensors. */
-	private Timer myTimer;
-	
-	/** All sensors. */
-	private SensorInterface humid, rain, temp, wind;
-	
-	/** Date of captured data. */
-	private Date date;
-	
-	/**
-	 * Constructor method.
-	 */
 	public ISS() {
-		date = new Date();
-		humid = new HumiditySensor();
-		rain = new RainSensor();
-		temp = new TemperatureSensor();
-		wind = new WindSensor();
 	}
-	
-	/**
-	 * This method will initialize very timer for all sensors.
-	 */
 	public void run() {
-		//Set up task for timer
-		TimerTask task = new TimerTask() {
-			
-			private String output;
-			
-			public void run() {
-				date = new Date();
-				output = "";
-				output += date.toString() + "\n";
-				output += humid.getData() + "\n";
-				output += rain.getData() + "\n";
-				output += temp.getData() + "\n";
-				output += wind.getData() + "\n";
-				System.out.println(output);
-				System.out.println();
-			}
-		};
-		
-		myTimer = new Timer();
-		
-		myTimer.schedule(task, 0, 10000);
+		//TODO: implement this
 	}
 	
 }
