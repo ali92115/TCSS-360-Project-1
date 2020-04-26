@@ -19,10 +19,10 @@ public class ISS {
 
 	public ISS() {
 		sensors = new ArrayList<>();
-		sensors.add(new RainSensor());
-		sensors.add(new TemperatureSensor());
-		sensors.add(new WindSensor());
-		sensors.add(new HumiditySensor());
+		sensors.add(new RainSensor().Start());
+		sensors.add(new TemperatureSensor().Start());
+		sensors.add(new WindSensor().Start());
+		sensors.add(new HumiditySensor().Start());
 	}
 
 	public void run() {
@@ -30,6 +30,7 @@ public class ISS {
 			@Override
 			public void run() {
 				StringBuilder output = new StringBuilder();
+				output.append("Timestamp: ").append(new Date()).append("\n");
 				for(ISensor<?> sensor: sensors)
 				{
 					output.append(sensor.getData().toString());
