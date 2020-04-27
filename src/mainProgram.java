@@ -1,6 +1,6 @@
 import iss.ISS;
 
-public class mainProgram {
+public class MainProgram {
 		
 	public static void main(String[] args) {
 		
