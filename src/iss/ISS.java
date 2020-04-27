@@ -17,6 +17,8 @@ import iss.sensors.*;
 public class ISS {
 	private final ArrayList<ISensor<?>> sensors;
 
+	private final int DELAY_SECONDS = 3;
+
 	public ISS() {
 		sensors = new ArrayList<>();
 		sensors.add(new RainSensor().Start());
@@ -41,6 +43,6 @@ public class ISS {
 			}
 		};
 		var myTimer = new Timer();
-		myTimer.schedule(task, 0, 10000);
+		myTimer.schedule(task, 0, DELAY_SECONDS*1000);
 	}
 }
